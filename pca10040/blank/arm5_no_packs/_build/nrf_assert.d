@@ -1,5 +1,5 @@
-.\_build\nrf_assert.o: D:\Nordic\SDK 12.2\components\libraries\util\nrf_assert.c
-.\_build\nrf_assert.o: D:\Nordic\SDK 12.2\components\libraries\util\nrf_assert.h
+.\_build\nrf_assert.o: D:\Nordic\SDK12.2\components\libraries\util\nrf_assert.c
+.\_build\nrf_assert.o: D:\Nordic\SDK12.2\components\libraries\util\nrf_assert.h
 .\_build\nrf_assert.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 .\_build\nrf_assert.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\nrf.h
 .\_build\nrf_assert.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\nrf52.h
@@ -13,11 +13,11 @@
 .\_build\nrf_assert.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\nrf51_to_nrf52.h
 .\_build\nrf_assert.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\nrf52_name_change.h
 .\_build\nrf_assert.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\compiler_abstraction.h
-.\_build\nrf_assert.o: D:\Nordic\SDK 12.2\components\libraries\util\app_error.h
+.\_build\nrf_assert.o: D:\Nordic\SDK12.2\components\libraries\util\app_error.h
 .\_build\nrf_assert.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 .\_build\nrf_assert.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-.\_build\nrf_assert.o: D:\Nordic\SDK 12.2\components\libraries\util\sdk_errors.h
-.\_build\nrf_assert.o: D:\Nordic\SDK 12.2\components\drivers_nrf\nrf_soc_nosd\nrf_error.h
+.\_build\nrf_assert.o: D:\Nordic\SDK12.2\components\libraries\util\sdk_errors.h
+.\_build\nrf_assert.o: D:\Nordic\SDK12.2\components\drivers_nrf\nrf_soc_nosd\nrf_error.h
 .\_build\nrf_assert.o: ..\config\sdk_config.h
-.\_build\nrf_assert.o: D:\Nordic\SDK 12.2\components\libraries\util\nordic_common.h
-.\_build\nrf_assert.o: D:\Nordic\SDK 12.2\components\libraries\util\app_error_weak.h
+.\_build\nrf_assert.o: D:\Nordic\SDK12.2\components\libraries\util\nordic_common.h
+.\_build\nrf_assert.o: D:\Nordic\SDK12.2\components\libraries\util\app_error_weak.h

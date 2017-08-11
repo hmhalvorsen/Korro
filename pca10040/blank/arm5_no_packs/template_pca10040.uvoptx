@@ -117,8 +117,28 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>ARMRTXEVENTFLAGS</Key>
+          <Name>-L70 -Z18 -C0 -M0 -T1</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>DLGTARM</Key>
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>ARMDBGFLAGS</Key>
+          <Name></Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
+          <Key>DLGUARM</Key>
+          <Name>/</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>JL2CM3</Key>
-          <Name>-U408001579 -O78 -S0 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight SW-DP") -D00(0BB11477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO15 -FD20000000 -FC2000 -FN2 -FF0nrf52xxx.flm -FS00 -FL0200000 -FP0($$Device:nRF52832_xxAA$Flash\nrf52xxx.flm) -FF1nrf52xxx_uicr -FS110001000 -FL11000 -FP1($$Device:nRF52832_xxAA$Flash\nrf52xxx_uicr.flm)</Name>
+          <Name>-U682365498 -O78 -S2 -ZTIFSpeedSel5000 -A0 -C0 -JU1 -JI127.0.0.1 -JP0 -RST0 -N00("ARM CoreSight SW-DP") -D00(2BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -TB1 -TFE0 -FO15 -FD20000000 -FC2000 -FN2 -FF0nrf52xxx.flm -FS00 -FL0200000 -FP0($$Device:nRF52832_xxAA$Flash\nrf52xxx.flm) -FF1nrf52xxx_uicr.flm -FS110001000 -FL11000 -FP1($$Device:nRF52832_xxAA$Flash\nrf52xxx_uicr.flm)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -126,19 +146,36 @@
           <Name>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0nrf52xxx -FS00 -FL0200000 -FP0($$Device:nRF52832_xxAA$Flash\nrf52xxx))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint/>
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>24</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>6110</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\..\main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\nrf52832_xxaa\../../../main.c\24</Expression>
+        </Bp>
+      </Breakpoint>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
-        <aLwin>0</aLwin>
+        <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
-        <viewmode>0</viewmode>
+        <viewmode>1</viewmode>
         <vrSel>0</vrSel>
         <aSym>0</aSym>
         <aTbox>0</aTbox>
@@ -204,8 +241,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\components\src\motor.c</PathWithFileName>
-      <FilenameWithoutPath>motor.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\components\src\rc_pwm.c</PathWithFileName>
+      <FilenameWithoutPath>rc_pwm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -216,8 +253,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\components\src\rc_pwm.c</PathWithFileName>
-      <FilenameWithoutPath>rc_pwm.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\components\src\motor.c</PathWithFileName>
+      <FilenameWithoutPath>motor.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -228,8 +265,20 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\..\..\components\src\real_time_clock.c</PathWithFileName>
-      <FilenameWithoutPath>real_time_clock.c</FilenameWithoutPath>
+      <PathWithFileName>..\..\..\components\src\adr_led.c</PathWithFileName>
+      <FilenameWithoutPath>adr_led.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>1</GroupNumber>
+      <FileNumber>6</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\..\..\components\src\app_adr_led.c</PathWithFileName>
+      <FilenameWithoutPath>app_adr_led.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -243,12 +292,12 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>2</GroupNumber>
-      <FileNumber>6</FileNumber>
+      <FileNumber>7</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\boards\boards.c</PathWithFileName>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\boards\boards.c</PathWithFileName>
       <FilenameWithoutPath>boards.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -263,24 +312,24 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>7</FileNumber>
+      <FileNumber>8</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\bsp\bsp.c</PathWithFileName>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\bsp\bsp.c</PathWithFileName>
       <FilenameWithoutPath>bsp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>3</GroupNumber>
-      <FileNumber>8</FileNumber>
+      <FileNumber>9</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\bsp\bsp_nfc.c</PathWithFileName>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\bsp\bsp_nfc.c</PathWithFileName>
       <FilenameWithoutPath>bsp_nfc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -295,7 +344,7 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>4</GroupNumber>
-      <FileNumber>9</FileNumber>
+      <FileNumber>10</FileNumber>
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -309,22 +358,10 @@
 
   <Group>
     <GroupName>nRF_Drivers</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
-    <File>
-      <GroupNumber>5</GroupNumber>
-      <FileNumber>10</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\hal\nrf_adc.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_adc.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
     <File>
       <GroupNumber>5</GroupNumber>
       <FileNumber>11</FileNumber>
@@ -332,8 +369,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\adc\nrf_drv_adc.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_adc.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\hal\nrf_adc.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_adc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -344,8 +381,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\clock\nrf_drv_clock.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_clock.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\adc\nrf_drv_adc.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_adc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -356,8 +393,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\common\nrf_drv_common.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_common.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\clock\nrf_drv_clock.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_clock.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -368,8 +405,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\comp\nrf_drv_comp.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_comp.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\common\nrf_drv_common.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_common.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -380,8 +417,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_gpiote.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\comp\nrf_drv_comp.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_comp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -392,8 +429,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\i2s\nrf_drv_i2s.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_i2s.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\gpiote\nrf_drv_gpiote.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_gpiote.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -404,8 +441,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\lpcomp\nrf_drv_lpcomp.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_lpcomp.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\i2s\nrf_drv_i2s.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_i2s.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -416,8 +453,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\pdm\nrf_drv_pdm.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_pdm.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\lpcomp\nrf_drv_lpcomp.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_lpcomp.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -428,8 +465,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\power\nrf_drv_power.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_power.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\pdm\nrf_drv_pdm.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_pdm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -440,8 +477,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\ppi\nrf_drv_ppi.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_ppi.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\power\nrf_drv_power.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_power.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -452,8 +489,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\pwm\nrf_drv_pwm.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_pwm.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\ppi\nrf_drv_ppi.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_ppi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -464,8 +501,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\qdec\nrf_drv_qdec.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_qdec.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\pwm\nrf_drv_pwm.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_pwm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -476,8 +513,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\rng\nrf_drv_rng.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_rng.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\qdec\nrf_drv_qdec.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_qdec.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -488,8 +525,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\rtc\nrf_drv_rtc.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_rtc.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\rng\nrf_drv_rng.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_rng.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -500,8 +537,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\saadc\nrf_drv_saadc.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_saadc.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\rtc\nrf_drv_rtc.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_rtc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -512,8 +549,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\spi_master\nrf_drv_spi.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_spi.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\saadc\nrf_drv_saadc.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_saadc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -524,8 +561,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\spi_slave\nrf_drv_spis.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_spis.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\spi_master\nrf_drv_spi.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_spi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -536,8 +573,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\swi\nrf_drv_swi.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_swi.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\spi_slave\nrf_drv_spis.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_spis.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -548,8 +585,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\timer\nrf_drv_timer.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_timer.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\swi\nrf_drv_swi.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_swi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -560,8 +597,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\twi_master\nrf_drv_twi.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_twi.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\timer\nrf_drv_timer.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_timer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -572,8 +609,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\twis_slave\nrf_drv_twis.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_twis.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\twi_master\nrf_drv_twi.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_twi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -584,8 +621,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\uart\nrf_drv_uart.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_uart.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\twis_slave\nrf_drv_twis.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_twis.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -596,8 +633,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\wdt\nrf_drv_wdt.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_wdt.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\uart\nrf_drv_uart.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_uart.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -608,8 +645,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\nrf_soc_nosd\nrf_nvic.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_nvic.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\wdt\nrf_drv_wdt.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_wdt.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -620,8 +657,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\hal\nrf_saadc.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_saadc.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\nrf_soc_nosd\nrf_nvic.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_nvic.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -632,7 +669,19 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\drivers_nrf\nrf_soc_nosd\nrf_soc.c</PathWithFileName>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\hal\nrf_saadc.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_saadc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>37</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\drivers_nrf\nrf_soc_nosd\nrf_soc.c</PathWithFileName>
       <FilenameWithoutPath>nrf_soc.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -647,25 +696,13 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>6</GroupNumber>
-      <FileNumber>37</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\button\app_button.c</PathWithFileName>
-      <FilenameWithoutPath>app_button.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>6</GroupNumber>
       <FileNumber>38</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\util\app_error.c</PathWithFileName>
-      <FilenameWithoutPath>app_error.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\button\app_button.c</PathWithFileName>
+      <FilenameWithoutPath>app_button.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -676,8 +713,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\util\app_error_weak.c</PathWithFileName>
-      <FilenameWithoutPath>app_error_weak.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\util\app_error.c</PathWithFileName>
+      <FilenameWithoutPath>app_error.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -688,8 +725,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\fifo\app_fifo.c</PathWithFileName>
-      <FilenameWithoutPath>app_fifo.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\util\app_error_weak.c</PathWithFileName>
+      <FilenameWithoutPath>app_error_weak.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -700,8 +737,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\gpiote\app_gpiote.c</PathWithFileName>
-      <FilenameWithoutPath>app_gpiote.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\fifo\app_fifo.c</PathWithFileName>
+      <FilenameWithoutPath>app_fifo.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -712,8 +749,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\pwm\app_pwm.c</PathWithFileName>
-      <FilenameWithoutPath>app_pwm.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\gpiote\app_gpiote.c</PathWithFileName>
+      <FilenameWithoutPath>app_gpiote.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -724,8 +761,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\scheduler\app_scheduler.c</PathWithFileName>
-      <FilenameWithoutPath>app_scheduler.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\pwm\app_pwm.c</PathWithFileName>
+      <FilenameWithoutPath>app_pwm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -736,8 +773,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\timer\app_timer.c</PathWithFileName>
-      <FilenameWithoutPath>app_timer.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\scheduler\app_scheduler.c</PathWithFileName>
+      <FilenameWithoutPath>app_scheduler.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -748,8 +785,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\twi\app_twi.c</PathWithFileName>
-      <FilenameWithoutPath>app_twi.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\timer\app_timer.c</PathWithFileName>
+      <FilenameWithoutPath>app_timer.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -760,8 +797,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\uart\app_uart_fifo.c</PathWithFileName>
-      <FilenameWithoutPath>app_uart_fifo.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\twi\app_twi.c</PathWithFileName>
+      <FilenameWithoutPath>app_twi.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -772,8 +809,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\util\app_util_platform.c</PathWithFileName>
-      <FilenameWithoutPath>app_util_platform.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\uart\app_uart_fifo.c</PathWithFileName>
+      <FilenameWithoutPath>app_uart_fifo.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -784,8 +821,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\crc16\crc16.c</PathWithFileName>
-      <FilenameWithoutPath>crc16.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\util\app_util_platform.c</PathWithFileName>
+      <FilenameWithoutPath>app_util_platform.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -796,8 +833,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\crc32\crc32.c</PathWithFileName>
-      <FilenameWithoutPath>crc32.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\crc16\crc16.c</PathWithFileName>
+      <FilenameWithoutPath>crc16.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -808,8 +845,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\hardfault\nrf52\handler\hardfault_handler_keil.c</PathWithFileName>
-      <FilenameWithoutPath>hardfault_handler_keil.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\crc32\crc32.c</PathWithFileName>
+      <FilenameWithoutPath>crc32.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -820,8 +857,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\hardfault\hardfault_implementation.c</PathWithFileName>
-      <FilenameWithoutPath>hardfault_implementation.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\hardfault\nrf52\handler\hardfault_handler_keil.c</PathWithFileName>
+      <FilenameWithoutPath>hardfault_handler_keil.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -832,8 +869,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\hci\hci_mem_pool.c</PathWithFileName>
-      <FilenameWithoutPath>hci_mem_pool.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\hardfault\hardfault_implementation.c</PathWithFileName>
+      <FilenameWithoutPath>hardfault_implementation.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -844,8 +881,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\hci\hci_slip.c</PathWithFileName>
-      <FilenameWithoutPath>hci_slip.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\hci\hci_mem_pool.c</PathWithFileName>
+      <FilenameWithoutPath>hci_mem_pool.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -856,8 +893,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\hci\hci_transport.c</PathWithFileName>
-      <FilenameWithoutPath>hci_transport.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\hci\hci_slip.c</PathWithFileName>
+      <FilenameWithoutPath>hci_slip.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -868,8 +905,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\led_softblink\led_softblink.c</PathWithFileName>
-      <FilenameWithoutPath>led_softblink.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\hci\hci_transport.c</PathWithFileName>
+      <FilenameWithoutPath>hci_transport.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -880,8 +917,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\low_power_pwm\low_power_pwm.c</PathWithFileName>
-      <FilenameWithoutPath>low_power_pwm.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\led_softblink\led_softblink.c</PathWithFileName>
+      <FilenameWithoutPath>led_softblink.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -892,8 +929,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\mem_manager\mem_manager.c</PathWithFileName>
-      <FilenameWithoutPath>mem_manager.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\low_power_pwm\low_power_pwm.c</PathWithFileName>
+      <FilenameWithoutPath>low_power_pwm.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -904,8 +941,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\util\nrf_assert.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_assert.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\mem_manager\mem_manager.c</PathWithFileName>
+      <FilenameWithoutPath>mem_manager.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -916,8 +953,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\csense\nrf_csense.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_csense.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\util\nrf_assert.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_assert.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -928,8 +965,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\csense_drv\nrf_drv_csense.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_drv_csense.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\csense\nrf_csense.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_csense.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -940,8 +977,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\queue\nrf_queue.c</PathWithFileName>
-      <FilenameWithoutPath>nrf_queue.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\csense_drv\nrf_drv_csense.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_drv_csense.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -952,8 +989,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\util\sdk_errors.c</PathWithFileName>
-      <FilenameWithoutPath>sdk_errors.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\queue\nrf_queue.c</PathWithFileName>
+      <FilenameWithoutPath>nrf_queue.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -964,7 +1001,19 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\slip\slip.c</PathWithFileName>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\util\sdk_errors.c</PathWithFileName>
+      <FilenameWithoutPath>sdk_errors.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>64</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\slip\slip.c</PathWithFileName>
       <FilenameWithoutPath>slip.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -979,24 +1028,24 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>7</GroupNumber>
-      <FileNumber>64</FileNumber>
+      <FileNumber>65</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\log\src\nrf_log_backend_serial.c</PathWithFileName>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\log\src\nrf_log_backend_serial.c</PathWithFileName>
       <FilenameWithoutPath>nrf_log_backend_serial.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>7</GroupNumber>
-      <FileNumber>65</FileNumber>
+      <FileNumber>66</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\components\libraries\log\src\nrf_log_frontend.c</PathWithFileName>
+      <PathWithFileName>D:\Nordic\SDK12.2\components\libraries\log\src\nrf_log_frontend.c</PathWithFileName>
       <FilenameWithoutPath>nrf_log_frontend.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
@@ -1011,25 +1060,13 @@
     <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>8</GroupNumber>
-      <FileNumber>66</FileNumber>
-      <FileType>1</FileType>
-      <tvExp>0</tvExp>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\external\segger_rtt\RTT_Syscalls_KEIL.c</PathWithFileName>
-      <FilenameWithoutPath>RTT_Syscalls_KEIL.c</FilenameWithoutPath>
-      <RteFlg>0</RteFlg>
-      <bShared>0</bShared>
-    </File>
-    <File>
-      <GroupNumber>8</GroupNumber>
       <FileNumber>67</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\external\segger_rtt\SEGGER_RTT.c</PathWithFileName>
-      <FilenameWithoutPath>SEGGER_RTT.c</FilenameWithoutPath>
+      <PathWithFileName>D:\Nordic\SDK12.2\external\segger_rtt\RTT_Syscalls_KEIL.c</PathWithFileName>
+      <FilenameWithoutPath>RTT_Syscalls_KEIL.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -1040,7 +1077,19 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>D:\Nordic\SDK 12.2\external\segger_rtt\SEGGER_RTT_printf.c</PathWithFileName>
+      <PathWithFileName>D:\Nordic\SDK12.2\external\segger_rtt\SEGGER_RTT.c</PathWithFileName>
+      <FilenameWithoutPath>SEGGER_RTT.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>8</GroupNumber>
+      <FileNumber>69</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>D:\Nordic\SDK12.2\external\segger_rtt\SEGGER_RTT_printf.c</PathWithFileName>
       <FilenameWithoutPath>SEGGER_RTT_printf.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>

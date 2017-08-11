@@ -16,35 +16,72 @@
 
 #include "rc_pwm.h"
 #include "motor.h"
+#include "app_adr_led.h"
+
+static bool algorithm_flag = false;
 
 const nrf_drv_timer_t application_timer = NRF_DRV_TIMER_INSTANCE(0);
 
 void compute_trajectory(float *channel_values, motor_t *motor)
 {
-  motor->output_motor_a = ((uint32_t)channel_values[0] * PWM_TOP_VALUE)/100;
-  motor->output_motor_b = ((uint32_t)channel_values[1] * PWM_TOP_VALUE)/100;
-	
-	if(motor->output_motor_a <= 0)
-		motor->output_motor_a = 0;
-	else if(motor->output_motor_a >= PWM_TOP_VALUE)
-		motor->output_motor_a = PWM_TOP_VALUE;
-	
-	if(motor->output_motor_b <= 0)
-		motor->output_motor_b = 0;
-	else if(motor->output_motor_b >= PWM_TOP_VALUE)
-		motor->output_motor_b = PWM_TOP_VALUE;
+  motor->output_motor_left = channel_values[0] * PWM_TOP_VALUE;
+  motor->output_motor_right = channel_values[0] * PWM_TOP_VALUE;
+
+  motor->direction_motor_left = 1;
+  motor->direction_motor_right = 1;
+
+  //Normally all motors will have the same output, but if the joystick is inched either left or right from up to 25% of the center we get a differentiation.
+
+  //Stage 1: One side gets less output
+
+  // Left or right side gets increasingly less output
+  if(channel_values[1] >= 0.25f && channel_values[1] <= 0.45f)
+    {
+      motor->output_motor_left *= (channel_values[1]-0.25f)*5;
+    }
+  else if(channel_values[1] >= 0.55f && channel_values[1] <= 0.75f)
+    {
+      motor->output_motor_right *= 1.f - (channel_values[1]-0.55f)*5.f;
+    }
+
+  // Left or right side begins to increasingly turn the other direction
+  if(channel_values[1] < 0.25f)
+  {
+    motor->output_motor_left *= 1.f - channel_values[1]*4.f;
+    motor->direction_motor_left = 0;
+  }
+  else if(channel_values[1] > 0.75f)
+  {
+    motor->output_motor_right *= 1.f - (1.f - channel_values[1])*4.f;
+    motor->direction_motor_right = 0;
+  }
+
+	if(motor->output_motor_left <= 0)
+		motor->output_motor_left = 0;
+	else if(motor->output_motor_left >= PWM_TOP_VALUE)
+		motor->output_motor_left = PWM_TOP_VALUE;
+
+	if(motor->output_motor_right <= 0)
+		motor->output_motor_right = 0;
+	else if(motor->output_motor_right >= PWM_TOP_VALUE)
+		motor->output_motor_right = PWM_TOP_VALUE;
+}
+
+void control_algorithm_handler(void)
+{
+  static float channel_values[4] = {0};
+  static motor_t motor;
+
+  rc_get_values(channel_values);
+  compute_trajectory(channel_values, &motor);
+  set_motor(&motor);
+  led_event_handler();
 }
 
 
 void timer_event_handler(nrf_timer_event_t event_type, void* p_context)
 {
-  static float channel_values[4] = {0};
-  static motor_t motor;
-	
-  nrf_gpio_pin_toggle(19);
-  rc_get_values(channel_values);
-  compute_trajectory(channel_values, &motor);
-  set_motor(&motor);
+  algorithm_flag = true;
 }
 
 //Init function for initiation of the main timer.
@@ -79,17 +116,21 @@ int main(void)
   //Extra
   nrf_log_init();
   NRF_LOG_INFO("\n\nInitiating all systems. \n");
-	
-	nrf_gpio_cfg_output(19);
-	
+
   // Radio and motor initiation
-	
+
   rc_init(); // Init driver for radio controller.
   motor_pwm_init(); // Init motor PWM.
+	adr_led_init(); // Init adressable leds.
 
   timer_init(); // Init timer to run main algorithm.
+
     while (true)
     {
-
+      if(algorithm_flag)
+      {
+        control_algorithm_handler();
+        algorithm_flag = false;
+      }
     }
 }

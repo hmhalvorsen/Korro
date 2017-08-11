@@ -1,8 +1,8 @@
-.\_build\nrf_adc.o: D:\Nordic\SDK 12.2\components\drivers_nrf\hal\nrf_adc.c
-.\_build\nrf_adc.o: D:\Nordic\SDK 12.2\components\drivers_nrf\hal\nrf_adc.h
+.\_build\nrf_adc.o: D:\Nordic\SDK12.2\components\drivers_nrf\hal\nrf_adc.c
+.\_build\nrf_adc.o: D:\Nordic\SDK12.2\components\drivers_nrf\hal\nrf_adc.h
 .\_build\nrf_adc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 .\_build\nrf_adc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-.\_build\nrf_adc.o: D:\Nordic\SDK 12.2\components\drivers_nrf\hal\nrf_peripherals.h
+.\_build\nrf_adc.o: D:\Nordic\SDK12.2\components\drivers_nrf\hal\nrf_peripherals.h
 .\_build\nrf_adc.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\nrf52832_peripherals.h
 .\_build\nrf_adc.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\nrf.h
 .\_build\nrf_adc.o: C:\Keil_v5\ARM\PACK\NordicSemiconductor\nRF_DeviceFamilyPack\8.11.1\Device\Include\nrf52.h

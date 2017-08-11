@@ -28,8 +28,8 @@ void motor_pwm_init(void)
       {
         MOTOR_A_PWM_OUTPUT_PIN, // Motor A PWM output
         MOTOR_B_PWM_OUTPUT_PIN, // Motor B PWM output
-        NRF_DRV_PWM_PIN_NOT_USED,
-        NRF_DRV_PWM_PIN_NOT_USED,
+        MOTOR_C_PWM_OUTPUT_PIN,
+        MOTOR_D_PWM_OUTPUT_PIN,
       },
       .base_clock  = NRF_PWM_CLK_16MHz,
       .count_mode  = NRF_PWM_MODE_UP,
@@ -40,6 +40,8 @@ void motor_pwm_init(void)
 
   nrf_gpio_cfg_output(MOTOR_A_DIRECTION);
   nrf_gpio_cfg_output(MOTOR_B_DIRECTION);
+  nrf_gpio_cfg_output(MOTOR_C_DIRECTION);
+  nrf_gpio_cfg_output(MOTOR_D_DIRECTION);
 
   err_code = nrf_drv_pwm_init(&motor_pwm, &pwm_config, pwm_event_handler);
   APP_ERROR_CHECK(err_code);
@@ -70,22 +72,26 @@ void motor_start_pwm(void)
 
 void motor_logic(motor_t *motor)
 {
-  if(motor->direction_motor_a)
+  if(motor->direction_motor_left)
   {
     nrf_gpio_pin_set(MOTOR_A_DIRECTION);
-  }
-  else
-  {
-    nrf_gpio_pin_clear(MOTOR_A_DIRECTION);
-  }
-
-  if(motor->direction_motor_b)
-  {
     nrf_gpio_pin_set(MOTOR_B_DIRECTION);
   }
   else
   {
+    nrf_gpio_pin_clear(MOTOR_A_DIRECTION);
     nrf_gpio_pin_clear(MOTOR_B_DIRECTION);
+  }
+
+  if(motor->direction_motor_right)
+  {
+    nrf_gpio_pin_set(MOTOR_C_DIRECTION);
+    nrf_gpio_pin_set(MOTOR_D_DIRECTION);
+  }
+  else
+  {
+    nrf_gpio_pin_clear(MOTOR_C_DIRECTION);
+    nrf_gpio_pin_clear(MOTOR_D_DIRECTION);
   }
 }
 
@@ -95,11 +101,13 @@ void set_motor(motor_t *motor)
 
   // Update outputted pwm values
 
-  pwm_values.channel_0 = PWM_TOP_VALUE - (uint16_t)motor->output_motor_a;
-  pwm_values.channel_1 = PWM_TOP_VALUE - (uint16_t)motor->output_motor_b;
+  pwm_values.channel_0 = PWM_TOP_VALUE - (uint16_t)motor->output_motor_left;
+  pwm_values.channel_1 = PWM_TOP_VALUE - (uint16_t)motor->output_motor_left;
+  pwm_values.channel_2 = PWM_TOP_VALUE - (uint16_t)motor->output_motor_right;
+  pwm_values.channel_3 = PWM_TOP_VALUE - (uint16_t)motor->output_motor_right;
 
 	#if PRINT_MOTOR
-	NRF_LOG_RAW_INFO("Motor A:: power: %d - direction: %d \t Motor B:: power: %d - direction: %d \n", (uint16_t)motor->output_motor_a, motor->direction_motor_a, (uint16_t)motor->output_motor_b, motor->direction_motor_b);
+	NRF_LOG_RAW_INFO("Motor left:: power: %d - direction: %d \t Motor right:: power: %d - direction: %d \n", (uint16_t)motor->output_motor_left, motor->direction_motor_left, (uint16_t)motor->output_motor_right, motor->direction_motor_right);
 	#endif
 
   motor_start_pwm();

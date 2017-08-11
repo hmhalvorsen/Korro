@@ -16,11 +16,13 @@ nrf_drv_timer_t rc_timer_2 = NRF_DRV_TIMER_INSTANCE(2);
 nrf_drv_timer_t rc_timer_3 = NRF_DRV_TIMER_INSTANCE(3);
 nrf_drv_timer_t rc_timer_4 = NRF_DRV_TIMER_INSTANCE(4);
 
+// Extracts rc values in percent, making it a coefficient to be multiplied
+
 void rc_get_values(float* fetch_array)
 {
   for(uint8_t i = 0; i<4; i++)
 	{
-		fetch_array[i] = ((channel.channel_value[i] - 1000.0f)*100.0f)/1000.0f;
+		fetch_array[i] = (channel.channel_value[i] - 1000.0f)/1000.0f;
 	}
 }
 
@@ -257,8 +259,8 @@ void rc_init(void)
 
 	nrf_drv_gpiote_in_event_enable(PIN_CHANNEL_1, true);
 	nrf_drv_gpiote_in_event_enable(PIN_CHANNEL_2, true);
-	nrf_drv_gpiote_in_event_enable(PIN_CHANNEL_3, true);
-	nrf_drv_gpiote_in_event_enable(PIN_CHANNEL_4, true);
+//	nrf_drv_gpiote_in_event_enable(PIN_CHANNEL_3, true);
+//	nrf_drv_gpiote_in_event_enable(PIN_CHANNEL_4, true);
 
   NRF_LOG_RAW_INFO("Radio controller initiated. \n");
 }
