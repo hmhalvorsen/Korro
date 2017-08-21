@@ -58,13 +58,13 @@ void compute_trajectory(float *channel_values, motor_t *motor)
 
 	if(motor->output_motor_left <= 0)
 		motor->output_motor_left = 0;
-	else if(motor->output_motor_left >= PWM_TOP_VALUE)
-		motor->output_motor_left = PWM_TOP_VALUE;
+	else if(motor->output_motor_left > PWM_TOP_VALUE)
+		motor->output_motor_left = 0;
 
 	if(motor->output_motor_right <= 0)
 		motor->output_motor_right = 0;
-	else if(motor->output_motor_right >= PWM_TOP_VALUE)
-		motor->output_motor_right = PWM_TOP_VALUE;
+	else if(motor->output_motor_right > PWM_TOP_VALUE)
+		motor->output_motor_right = 0;
 }
 
 void control_algorithm_handler(void)
@@ -75,7 +75,7 @@ void control_algorithm_handler(void)
   rc_get_values(channel_values);
   compute_trajectory(channel_values, &motor);
   set_motor(&motor);
-  led_event_handler();
+  //led_event_handler();
 }
 
 
@@ -121,7 +121,7 @@ int main(void)
 
   rc_init(); // Init driver for radio controller.
   motor_pwm_init(); // Init motor PWM.
-	adr_led_init(); // Init adressable leds.
+	//adr_led_init(); // Init adressable leds.
 
   timer_init(); // Init timer to run main algorithm.
 

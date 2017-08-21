@@ -22,7 +22,10 @@ void rc_get_values(float* fetch_array)
 {
   for(uint8_t i = 0; i<4; i++)
 	{
-		fetch_array[i] = (channel.channel_value[i] - 1000.0f)/1000.0f;
+		if(channel.channel_value[i] >= 10000)
+			fetch_array[i] = 1.f - (channel.channel_value[i] - 18000.0f)/1000.0f;
+		else		
+			fetch_array[i] = (channel.channel_value[i] - 1000.0f)/1000.0f;
 	}
 }
 

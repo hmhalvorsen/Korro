@@ -6,11 +6,11 @@
 #define PRINT_PWM 0
 
 #define LED_OUTPUT_PIN  3
-#define NUMBER_OF_LEDS  24
+#define NUMBER_OF_LEDS  47
 #define DATA_BIT_LENGTH 24
 
-#define PWM_VALUE_ZERO 14 //12.8f
-#define PWM_VALUE_ONE	 9 //9.6f
+#define PWM_VALUE_ZERO 13 //12.8f
+#define PWM_VALUE_ONE	 5 //9.6f
 
 // Prototypes for functions used in source file:
 
